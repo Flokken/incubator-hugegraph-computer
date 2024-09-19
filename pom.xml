@@ -96,7 +96,7 @@
         <compiler.source>11</compiler.source>
         <compiler.target>11</compiler.target>
         <shell-executable>bash</shell-executable>
-        <etcd.version>0.5.4</etcd.version>
+        <etcd.version>0.7.0</etcd.version>
         <hadoop-version>3.1.2</hadoop-version>
         <netty-version>4.1.42.Final</netty-version>
         <commons-lang3-version>3.12.0</commons-lang3-version>
