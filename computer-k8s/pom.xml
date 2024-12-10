@@ -28,7 +28,7 @@
     <artifactId>computer-k8s</artifactId>
 
     <properties>
-        <fabric8.version>5.6.0</fabric8.version>
+        <fabric8.version>7.0.0</fabric8.version>
         <lombok.version>1.18.0</lombok.version>
         <sundrio.version>0.40.1</sundrio.version>
         <maven.jsonschema2pojo.plugin.version>1.1.0</maven.jsonschema2pojo.plugin.version>
@@ -115,18 +115,10 @@
                         <configuration>
                             <target>
                                 <!-- removing the generated Schema class -->
-                                <delete
-                                        file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/CrdSchema.java"
-                                        verbose="true" />
-                                <delete
-                                        file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/EnumSchema.java"
-                                        verbose="true" />
-                                <delete
-                                        file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/HugeGraphComputerJob.java"
-                                        verbose="true" />
-                                <delete
-                                        file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/HugeGraphComputerJobList.java"
-                                        verbose="true" />
+                                <delete file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/CrdSchema.java" verbose="true"/>
+                                <delete file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/EnumSchema.java" verbose="true"/>
+                                <delete file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/HugeGraphComputerJob.java" verbose="true"/>
+                                <delete file="${project.build.directory}/generated-sources/src/gen/java/org/apache/hugegraph/computer/k8s/crd/model/HugeGraphComputerJobList.java" verbose="true"/>
                             </target>
                         </configuration>
                         <goals>
@@ -197,7 +189,8 @@
                                 </replacement>
                                 <replacement>
                                     <token>public[\s]class</token>
-                                    <value>@SuppressWarnings({"unchecked", "deprecation"})&#x000A;public class</value>
+                                    <value>@SuppressWarnings({"unchecked", "deprecation"})
+public class</value>
                                 </replacement>
                             </replacements>
                         </configuration>
